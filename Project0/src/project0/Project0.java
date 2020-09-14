@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project0;
 
-/**
- *
- * @author Dylan
- */
+import java.util.Scanner;
+
 public class Project0 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+               String name;
+        
+        System.out.println("Hello, I am the degree cost calculator. What is your name?");
+        Scanner keyboard = new Scanner(System.in);
+        name = keyboard.nextLine();
+        
+        System.out.println("My name is " + name + ". nice to meet you" );
     }
     
 }
