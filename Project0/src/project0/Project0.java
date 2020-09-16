@@ -43,7 +43,7 @@ public class Project0 {
       
         double roundedsemester = Math.ceil(5.686);
         costTotal = Math.ceil(5.686);
-        System.out.println("Dylan, based on my calculations, it will take you " + roundedsemester + " more semesters and a total cost of $41109.78");
+        System.out.println("Dylan, based on my calculations, it will take you " + roundedsemester + " more semesters and a total cost of " + costTotal*5.686);
         
         
       
