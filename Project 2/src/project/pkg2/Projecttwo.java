@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Project2 {
+public class Projecttwo {
 
     
     public static void main(String[] args) throws  FileNotFoundException, IOException {
@@ -101,58 +101,9 @@ public class Project2 {
                     }
                 }
              }
-    }
-
-        
-          
-            
-        
-         
-        
-   
-      
-      
- 
-       
-        
-        
-        
-        
-           
-     public static void createGameEscapeWordFile() throws FileNotFoundException  {
-   
-    }
-        
     
-    
-    public static void createSingleCommandFile(String commandName)
-    {
-        // When creating a command, ask if user if this command will wound the player, 
-        //  if the answer is yes, write the first line of file as WOUNDED or some similar trigger. 
-        //  If the answer is no, write an empty line.
 
     }
-    
-    public static void createGameCommandFiles()
-    {
-        // FIX ME
-        String command = "";
-        while ( !command.equalsIgnoreCase("quitCreateMode") )
-        {
-           createSingleCommandFile(command); 
-        }
-    }
-    
-    public static void createGameIntroductionFile()
-    {
-          
-  
-
-            
-        
-    }
-
- 
     }
  
 
