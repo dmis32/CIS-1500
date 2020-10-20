@@ -46,6 +46,8 @@ public class Project0 {
         System.out.println("Dylan, based on my calculations, it will take you " + roundedsemester + " more semesters and a total cost of " + costTotal*5.686);
         
         
+        
+        
       
     
     }

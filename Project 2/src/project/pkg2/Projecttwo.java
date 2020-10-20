@@ -13,13 +13,13 @@ public class Projecttwo {
     
     public static void main(String[] args) throws  FileNotFoundException, IOException {
        
-        System.out.println("Hello! Welcome to the build your own game!");
-        System.out.println("Would you like to play or create?");
-        System.out.println("Enter 'Play' to play or 'create' to create.");
+       
         
+        System.out.println("Enter CREATE if you want to create your own game"); 
+        System.out.println("Enter PLAY if you want to play your own game");
         Scanner keyboard = new Scanner(System.in);
         String input = keyboard.nextLine();
-        if(input.equalsIgnoreCase("create")){}
+            if(input.equalsIgnoreCase("CREATE")){
         System.out.println("Create the beginning of your game.");
             try (PrintWriter writer1 = new PrintWriter("GameIntroduction.txt")) {
                 input = keyboard.nextLine();
@@ -27,28 +27,34 @@ public class Projecttwo {
             }    
             
             do{
-        System.out.println("Create commands for the player to have, for example, wound.");    
-        System.out.println("You MUST create a command to heal the player");
+            boolean isWounded = false;
+                
+        System.out.println("Create commands for the player");    
+        System.out.println("You MUST create a sleep option");
                 input = keyboard.nextLine();
                 PrintWriter writer2 = new PrintWriter(input + ".txt");
-        System.out.println("Is this command wounding the player?");
+                
+        System.out.println("Is this wounding the player?");
                 input = keyboard.nextLine();
-            if (input.equalsIgnoreCase("Yes")) {
+            if (input.equalsIgnoreCase("Yes") && !isWounded) {
                     writer2.println("Ouch! You have been wounded!");
+                    isWounded = true;
                 } else {
                     writer2.println(" ");
                 }
-        System.out.println("Is this command healing the player?");
+        System.out.println("Will this make the player sleep?");
                 input = keyboard.nextLine();
-                if (input.equalsIgnoreCase("yes")) {
-                                writer2.println("You have been healed. Your health has been restored.");
+            if (input.equalsIgnoreCase("yes") && !isWounded) {
+                        writer2.println("You have slept. Your health has been restored.");
+                        isWounded = false;
+                                      
                 }
         System.out.println("Enter what this command will do.");
                 input = keyboard.nextLine();
                 writer2.println(input);
                 writer2.close();
             
-        System.out.println("Would you like to create another command?");
+        System.out.println("Create another command?");
                 input = keyboard.nextLine();
             } while (input.equalsIgnoreCase("yes"));
 
@@ -57,19 +63,23 @@ public class Projecttwo {
             PrintWriter writer3 = new PrintWriter("GameEscapeWord.txt");
             writer3.println(input);
             writer3.close();
-            System.out.println("Congratulations! You have finished your game!");
-            System.out.println("Would you like to play it? If so, press 'O.'");
-            input = keyboard.nextLine();
             
-        if  (input.equalsIgnoreCase("O")) {
+        System.out.println("You have finished your own game");
+        
+             
+        
+        System.out.println("If you want to play, enter PLAY");
+            input = keyboard.nextLine();
+        }    
+            if  (input.equalsIgnoreCase("PLAY")) {
             File Intro = new File("GameIntroduction.txt");
             Scanner introReader = new Scanner(Intro);
             while (introReader.hasNext()) {
-                System.out.println(introReader.nextLine());
+        System.out.println(introReader.nextLine());
             }
         }
-     System.out.println("Please enter a command.");
-            System.out.println("Press 'X' when you want to enter the escape word.");
+        System.out.println("Enter a command.");
+        System.out.println("Enter the escape word if you want to exit the game.");
              while (input.equalsIgnoreCase(input)) {
                 input = keyboard.nextLine();
                 File nextCommand = new File(input + ".txt");
@@ -79,13 +89,13 @@ public class Projecttwo {
                 if (nextCommand.exists()) {
                     Scanner nextCommandReader = new Scanner(nextCommand);
                     while (nextCommandReader.hasNext()) {
-                        System.out.println(nextCommandReader.nextLine());
+        System.out.println(nextCommandReader.nextLine());
                     }
                     trackWriter.close();
                 }
 
                 while (!nextCommand.exists()) {
-                    System.out.println("That is an invalid command. Please try again.");
+        System.out.println("Invalid command. Try again.");
                     input = keyboard.nextLine();
                     File tryAgain = new File(input + ".txt");
                     if (tryAgain.exists()) {
@@ -95,9 +105,9 @@ public class Projecttwo {
                         tracker.close();
                         Scanner tryAgainReader = new Scanner(tryAgain);
                         while (tryAgainReader.hasNext()) {
-                            System.out.println(tryAgainReader.nextLine());
+        System.out.println(tryAgainReader.nextLine());
                         }
-                        break;
+ break;
                     }
                 }
              }

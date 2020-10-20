@@ -18,17 +18,18 @@ public class ProjectTwo {
         
         Scanner keyboard = new Scanner(System.in);
         String CREATE = keyboard.nextLine();
-        if (CREATE.equalsIgnoreCase(CREATE)) {
-            System.out.println("Create a Start for your game");   
-            
+        if (CREATE.equalsIgnoreCase(CREATE)) 
+            System.out.println("Create a Start for your game");  
             File file1 = new File("GameIntroduction.txt");
             PrintWriter writer1 = new PrintWriter("GameIntroduction.txt");
             String input = keyboard.nextLine();
             writer1.close();
             
-        }
+     
             
         
+            
+       
         
         
     }

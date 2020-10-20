@@ -1,2 +1,2 @@
 Ouch! You have been wounded!
-punch 
+this will punch the opponent and wound it
