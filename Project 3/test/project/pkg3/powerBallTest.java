@@ -21,25 +21,6 @@ public class powerBallTest {
     public powerBallTest() {
     }
     
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
-    }
-
-    /**
-     * Test of getWinnings method, of class powerBall.
-     */
     @Test
     public void testGetWinnings() {
         System.out.println("getWinnings");
@@ -48,13 +29,10 @@ public class powerBallTest {
         double expResult = 0.0;
         double result = instance.getWinnings(winningTicket);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+   
     }
 
-    /**
-     * Test of getWhiteBalls method, of class powerBall.
-     */
+ 
     @Test
     public void testGetWhiteBalls() {
         System.out.println("getWhiteBalls");
@@ -62,13 +40,10 @@ public class powerBallTest {
         int[] expResult = null;
         int[] result = instance.getWhiteBalls();
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
-    /**
-     * Test of getRedBall method, of class powerBall.
-     */
+  
     @Test
     public void testGetRedBall() {
         System.out.println("getRedBall");
@@ -76,13 +51,10 @@ public class powerBallTest {
         double expResult = 0.0;
         double result = instance.getRedBall();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
-    /**
-     * Test of hasWhiteNumber method, of class powerBall.
-     */
+  
     @Test
     public void testHasWhiteNumber() {
         System.out.println("hasWhiteNumber");
@@ -91,13 +63,10 @@ public class powerBallTest {
         boolean expResult = false;
         boolean result = instance.hasWhiteNumber(num);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
-    /**
-     * Test of toString method, of class powerBall.
-     */
+    
     @Test
     public void testToString() {
         System.out.println("toString");
@@ -105,8 +74,7 @@ public class powerBallTest {
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
     
 }
