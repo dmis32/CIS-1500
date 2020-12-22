@@ -16,6 +16,6 @@ public class Enemy extends User {
     }
 
     void fight(Player playerCharacter) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 }

@@ -34,8 +34,7 @@ public abstract class User {
             } else { //Normal hit! Take strength stat / 3 of damage
                 toReturn += "It hits!\n";
                 damage = Math.max(1, this.getStrength() / 3);
-            }
-     
+            } 
         return toReturn;
     }
         return null;
@@ -54,44 +53,33 @@ public abstract class User {
         public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
-
     public boolean isDead() {
         return this.currentHP <= 0;
     }
-
     public void die() {
         setCurrentHP(0);
     }
-
-
     public void setTotalHP(int totalHP) {
         this.totalHP = totalHP;
     }
-
     public int getCurrentHP() {
         return this.currentHP;
     }
-
     public void setCurrentHP(int currentHP) {
         this.currentHP = currentHP;
     }
-
     public int getStrength() {
         return this.strength;
     }
-
     public void setStrength(int strength) {
         this.strength = strength;
     }
-
     public int getDexterity() {
         return this.dexterity;
     }
-
     public void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     }
-
     public int getIntelligence() {
         return this.intelligence;
     }

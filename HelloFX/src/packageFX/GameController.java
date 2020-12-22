@@ -110,8 +110,8 @@ public class GameController {
 
         ChoiceDialog d = new ChoiceDialog(playerCharacters[0], playerCharacters);
         d.setHeaderText(
-            "Welcome to the Fighting game" + 
-            "You have three options for your Fighting player:\n" + 
+            "Welcome to the Adventure Game!!" + 
+            " You have three options to choose from:\n" + 
             "Beast\n" + 
             "Duke\n" + 
             "Rider"
